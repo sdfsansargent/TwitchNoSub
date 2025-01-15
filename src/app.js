@@ -17,7 +17,6 @@ window.Worker = class Worker extends oldWorker {
     constructor(twitchBlobUrl) {
         super(twitchBlobUrl);
 
-        if (!isVariantA) {
             this.addEventListener("message", (event) => {
                 const data = event.data;
 
@@ -31,4 +30,3 @@ window.Worker = class Worker extends oldWorker {
             });
         }
     }
-}
